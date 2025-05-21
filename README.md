@@ -77,6 +77,7 @@ The initial load for the `DimProduct` table was performed using a **Slowly Chang
 - **SCD Type 2**: Implemented to track historical changes (e.g., product category changes over time) by inserting new rows with versioning and effective dates.
 
 Since this is the **first load**, all records were inserted directly into the destination without triggering any historization logic or change detection. Future loads will detect changes and apply the appropriate SCD logic (Type 1 or 2) as needed.
+
 ![Product Dimension - SCD Load](https://github.com/ManarZeita25/sales-datamart-adventureworks2022/blob/main/images/dim_product.png)
 ### 🔄 Product Dimension – After Making Changes
 
