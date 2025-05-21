@@ -32,5 +32,26 @@ This project uses the **AdventureWorks2022** database to build a **Sales Data Ma
    Loaded cleansed data into the final schema, enabling structured analysis.
 
 ---
+### ⭐ Project Workflow
+
+Meticulously crafted a star schema that forms the backbone of our data mart.  
+This design includes:
+
+- A **central Fact Table** (`FactSales`) that stores key performance indicators such as sales amount and quantity, along with foreign keys to dimension tables.
+- Four **Dimension Tables**:
+  - `DimProduct`: Contains product details like name, category, and subcategory.
+  - `DimCustomer`: Holds customer information including name and geographic details.
+  - `DimTerritory`: Stores regional sales data.
+  - `DimDate`: A time dimension that enables flexible date-based analysis (day, month, quarter, year).
+
+This structure enables efficient querying, simplified reporting, and supports historical trend analysis.
+![Star Schema Diagram](https://github.com/ManarZeita25/sales-datamart-adventureworks2022/blob/main/images/Schema.png)
+
+### 🛠️ SQL Scripts
+
+SQL scripts are provided to create the schema and metadata/control tables.
+
+[📂 View SQL Scripts Folder](https://github.com/ManarZeita25/sales-datamart-adventureworks2022/tree/main/script)
+
 
 
