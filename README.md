@@ -68,6 +68,7 @@ To automate the ETL process and populate the Sales Data Mart, I have developed t
 - **Fact_Sales_Incremental_Load**: Loads only new or changed sales records using incremental logic based on `last_load_date` from the control table.
 
 Each package is designed for reliability, data quality validation, and performance efficiency using best practices in SSIS.
+
 ![SSIS Packages](https://github.com/ManarZeita25/sales-datamart-adventureworks2022/blob/main/images/SSIS%20Packages.png)
 ### 🧩 Product Dimension – First Load
 
@@ -98,6 +99,45 @@ These enhancements guarantee that our data mart remains a reliable source for an
 ![Product Dimension - After SCD Changes](https://github.com/ManarZeita25/sales-datamart-adventureworks2022/blob/main/images/dim_product%202.png)
 
 
+### 👥 Customer Dimension – Load Process Summary
+
+#### 🟢 First Load
+The initial load of the `DimCustomer` table involved populating it with essential customer data for the first time.  
+All records were inserted directly into the destination without applying any change-tracking logic (i.e., no SCD Type 1 or Type 2 at this stage).
+
+![Customer Dim – First Load](https://github.com/ManarZeita25/sales-datamart-adventureworks2022/blob/main/images/dim_customer.png)
+
+---
+
+#### 🔄 After Applying Changes
+In the enhancement phase, updates and corrections were applied to existing customer records using **Slowly Changing Dimensions (SCD)** techniques:
+
+- **Type 1** for non-historical corrections (e.g., customer name fixes)
+- **Type 2** for tracking historical changes (e.g., region or status updates)
+
+This ensures the dimension accurately reflects real-world changes in customer data.
+
+![Customer Dim – After Changes](https://github.com/ManarZeita25/sales-datamart-adventureworks2022/blob/main/images/dim_customer%202.png)
+
+### 🌍 Territory Dimension 
+
+In the `AdventureWorks2022` database, the `CountryRegionCode` is stored as two-letter country codes (e.g., "US", "CA", "FR").  
+To enhance readability and improve reporting clarity, a custom lookup table `dbo.lookup_country` was created to map these codes to full country names (e.g., "United States", "Canada", "France").  
+This mapping is used during ETL to enrich the `DimTerritory` table with meaningful country names.
+
+![Territory Dim ](https://github.com/ManarZeita25/sales-datamart-adventureworks2022/blob/main/images/dim_Territory.png)
+
+
+---
+
+### 📅 Date Dimension
+
+The `DimDate` table is populated by extracting data from a pre-defined Excel sheet that contains the full date range and related attributes.  
+This static date table is imported into the data mart to support time-based analysis (Year, Month, Quarter, Day).
+
+📄 You can find the load script in the [Scripts](https://github.com/ManarZeita25/sales-datamart-adventureworks2022/blob/main/script/dim_date_populate_table.xls) folder.
+
+![Date Dim ](https://github.com/ManarZeita25/sales-datamart-adventureworks2022/blob/main/images/dim_date.png)
 
 
 
