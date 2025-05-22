@@ -137,7 +137,7 @@ This static date table is imported into the data mart to support time-based anal
 
 📄 You can find the load script in the [Scripts](https://github.com/ManarZeita25/sales-datamart-adventureworks2022/blob/main/script/dim_date_populate_table.xls) folder.
 
-![Date Dim ](https://github.com/ManarZeita25/sales-datamart-adventureworks2022/blob/main/images/dim_date.png)
+![Date Dim ](https://github.com/ManarZeita25/sales-datamart-adventureworks2022/blob/main/images/dim%20date.png)
 
 
 
