@@ -139,5 +139,26 @@ This static date table is imported into the data mart to support time-based anal
 
 ![Date Dim ](https://github.com/ManarZeita25/sales-datamart-adventureworks2022/blob/main/images/dim%20date.png)
 
+---
+###  Fact Table Full Load
+![Fact Table Full Load ](https://github.com/ManarZeita25/sales-datamart-adventureworks2022/blob/main/images/Fact%20Table%20Full%20Load%20Control%20Flow.png)
+![Fact Table Full Load ](https://github.com/ManarZeita25/sales-datamart-adventureworks2022/blob/main/images/Fact%20Table%20Full%20Load%20Data%20Flow.png)
 
+--
+###  Fact Table Incremental Load:
+![Fact Table Incremental Load ](https://github.com/ManarZeita25/sales-datamart-adventureworks2022/blob/main/images/Fact%20Table%20Incremental%20Load%20control%20flow.png)
+![Fact Table Incremental Load ](https://github.com/ManarZeita25/sales-datamart-adventureworks2022/blob/main/images/Fact%20Table%20Incremental%20Load%20data%20flow.png)
+
+### 🆕 Test Data – Insert New 5 Records into Sources
+
+To validate the incremental load logic, **5 new records** have been inserted into the source tables. These new entries are intended to simulate recent changes or additions in the operational system.
+
+📜 You can find the SQL script used to insert the test records here:  
+[📂 Insert_New_5_Records.sql](https://github.com/ManarZeita25/sales-datamart-adventureworks2022/blob/main/script/Insert%20Data%20into%20Source%20Table%20to%20test%20Increamental%20Load%20of%20Fact%20Table..sql)
+
+###  Fact Table Incremental Load:
+![Fact Table Incremental Load ](https://github.com/ManarZeita25/sales-datamart-adventureworks2022/blob/main/images/Fact%20Table%20Incremental%20Load%20data%20flow%20test.png)
+
+###  Check the new insertion data in the Fact Table :
+(https://github.com/ManarZeita25/sales-datamart-adventureworks2022/blob/main/images/Check%20the%20new%20insertion%20data%20in%20the%20Fact%20Table.png)
 
