@@ -160,5 +160,5 @@ To validate the incremental load logic, **5 new records** have been inserted int
 ![Fact Table Incremental Load ](https://github.com/ManarZeita25/sales-datamart-adventureworks2022/blob/main/images/Fact%20Table%20Incremental%20Load%20data%20flow%20test.png)
 
 ###  Check the new insertion data in the Fact Table :
-(https://github.com/ManarZeita25/sales-datamart-adventureworks2022/blob/main/images/Check%20the%20new%20insertion%20data%20in%20the%20Fact%20Table.png)
+![Check the new insertion data in the Fact Table ](https://github.com/ManarZeita25/sales-datamart-adventureworks2022/blob/main/images/Check%20the%20new%20insertion%20data%20in%20the%20Fact%20Table.png)
 
